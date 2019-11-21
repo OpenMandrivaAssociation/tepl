@@ -7,7 +7,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        4.2.0
+Version:        4.2.1
 Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
