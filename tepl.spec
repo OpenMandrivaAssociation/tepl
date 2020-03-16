@@ -7,7 +7,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        4.2.1
+Version:        4.4.0
 Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
@@ -16,7 +16,6 @@ License:        LGPLv2+
 URL:            https://wiki.gnome.org/Projects/Tepl
 Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
 
-BuildRequires:  gcc
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(amtk-5)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -71,7 +70,7 @@ the functionality of the installed %{name} package.
 %autosetup
 
 %build
-%configure2_5x --enable-installed-tests
+%configure --enable-installed-tests
 %make_build V=1
 
 %install
@@ -101,5 +100,3 @@ find %{buildroot} -name '*.la' -delete
 %files tests
 %{_libexecdir}/installed-tests/tepl-%{api}/
 %{_datadir}/installed-tests/tepl-%{api}/
-
-
