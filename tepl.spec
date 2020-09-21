@@ -82,7 +82,6 @@ find %{buildroot} -name '*.la' -delete
 %find_lang tepl-%{api}
 
 %files -f tepl-%{api}.lang
-%license COPYING
 %doc AUTHORS NEWS README
 
 %files -n %{girname}
