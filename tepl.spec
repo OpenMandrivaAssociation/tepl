@@ -95,7 +95,7 @@ find %{buildroot} -name '*.la' -delete
 %{_includedir}/tepl-%{api}/
 %{_libdir}/libtepl-%{api}.so
 %{_libdir}/pkgconfig/tepl-%{api}.pc
-%{_datadir}/gir-1.0/Tepl-%{api}.gir
+#{_datadir}/gir-1.0/Tepl-%{api}.gir
 
 %files tests
 %{_libexecdir}/installed-tests/tepl-%{api}/
