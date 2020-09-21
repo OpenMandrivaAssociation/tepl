@@ -1,4 +1,4 @@
-%global api	4
+%global api	5
 %global major	0
 %define libname %mklibname tepl %{api} %{major}
 %define girname	%mklibname tepl-gir %{api}
