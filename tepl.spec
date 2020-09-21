@@ -16,6 +16,7 @@ License:        LGPLv2+
 URL:            https://wiki.gnome.org/Projects/Tepl
 Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
 
+BuildRequires:  meson
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(amtk-5)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -70,11 +71,11 @@ the functionality of the installed %{name} package.
 %autosetup
 
 %build
-%configure --enable-installed-tests
-%make_build V=1
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 find %{buildroot} -name '*.la' -delete
 
