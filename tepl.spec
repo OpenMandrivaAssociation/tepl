@@ -71,7 +71,7 @@ the functionality of the installed %{name} package.
 %autosetup
 
 %build
-%meson
+%meson  -Dgtk_doc=true
 %meson_build
 
 %install
@@ -98,5 +98,5 @@ find %{buildroot} -name '*.la' -delete
 #{_datadir}/gir-1.0/Tepl-%{api}.gir
 
 %files tests
-%{_libexecdir}/installed-tests/tepl-%{api}/
-%{_datadir}/installed-tests/tepl-%{api}/
+#{_libexecdir}/installed-tests/tepl-%{api}/
+#{_datadir}/installed-tests/tepl-%{api}/
