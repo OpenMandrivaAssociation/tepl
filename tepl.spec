@@ -91,7 +91,7 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libtepl-%{api}.so.%{major}*
 
 %files -n %{devname}
-%doc %{_datadir}/gtk-doc/html/tepl-%{api}/
+#doc #{_datadir}/gtk-doc/html/tepl-%{api}/
 %{_includedir}/tepl-%{api}/
 %{_libdir}/libtepl-%{api}.so
 %{_libdir}/pkgconfig/tepl-%{api}.pc
