@@ -60,14 +60,6 @@ Obsoletes:	%{_lib}tepl-devel < 4.2.0-2
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
-%package        tests
-Summary:        Tests for the %{name} package
-Requires:       %{name}%{?_isa} = %{version}-%{release}
-
-%description    tests
-The %{name}-tests package contains tests that can be used to verify
-the functionality of the installed %{name} package.
-
 %prep
 %autosetup
 
@@ -92,12 +84,8 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libtepl-%{api}.so.%{major}*
 
 %files -n %{devname}
-#doc #{_datadir}/gtk-doc/html/tepl-%{api}/
+%{_datadir}/gtk-doc/html/tepl-5/*
 %{_includedir}/tepl-%{api}/
 %{_libdir}/libtepl-%{api}.so
 %{_libdir}/pkgconfig/tepl-%{api}.pc
-#{_datadir}/gir-1.0/Tepl-%{api}.gir
-
-%files tests
-#{_libexecdir}/installed-tests/tepl-%{api}/
-#{_datadir}/installed-tests/tepl-%{api}/
+%{_datadir}/gir-1.0/Tepl-%{api}.gir
