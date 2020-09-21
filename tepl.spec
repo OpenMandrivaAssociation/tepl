@@ -18,6 +18,7 @@ Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{versio
 
 BuildRequires:  meson
 BuildRequires:  gettext
+BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(amtk-5)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
