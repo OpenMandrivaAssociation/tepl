@@ -75,7 +75,7 @@ find %{buildroot} -name '*.la' -delete
 %find_lang tepl-%{api}
 
 %files -f tepl-%{api}.lang
-%doc AUTHORS NEWS README
+%doc NEWS README.md
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/Tepl-%{api}.typelib
