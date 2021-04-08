@@ -1,4 +1,4 @@
-%global api	5
+%global api	6
 %global major	0
 %define libname %mklibname tepl %{api} %{major}
 %define girname	%mklibname tepl-gir %{api}
@@ -84,7 +84,7 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libtepl-%{api}.so.%{major}*
 
 %files -n %{devname}
-%{_datadir}/gtk-doc/html/tepl-5/*
+%{_datadir}/gtk-doc/html/tepl-%{api}/*
 %{_includedir}/tepl-%{api}/
 %{_libdir}/libtepl-%{api}.so
 %{_libdir}/pkgconfig/tepl-%{api}.pc
