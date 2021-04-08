@@ -1,4 +1,4 @@
-%global api	5
+%global api	6
 %global major	0
 %define libname %mklibname tepl %{api} %{major}
 %define girname	%mklibname tepl-gir %{api}
@@ -7,7 +7,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        5.0.1
+Version:        6.00.0
 Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
@@ -75,7 +75,7 @@ find %{buildroot} -name '*.la' -delete
 %find_lang tepl-%{api}
 
 %files -f tepl-%{api}.lang
-%doc AUTHORS NEWS README
+%doc NEWS README.md
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/Tepl-%{api}.typelib
@@ -84,7 +84,7 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libtepl-%{api}.so.%{major}*
 
 %files -n %{devname}
-%{_datadir}/gtk-doc/html/tepl-5/*
+%{_datadir}/gtk-doc/html/tepl-%{api}/*
 %{_includedir}/tepl-%{api}/
 %{_libdir}/libtepl-%{api}.so
 %{_libdir}/pkgconfig/tepl-%{api}.pc
