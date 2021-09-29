@@ -8,7 +8,7 @@
 
 Name:           tepl
 Version:        6.00.0
-Release:        1
+Release:        2
 Summary:        Text editor product line
 Group:		System/Libraries
 
