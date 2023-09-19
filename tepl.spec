@@ -20,7 +20,7 @@ Source0:        https://gitlab.gnome.org/swilmet/tepl/-/archive/%{version}/tepl-
 BuildRequires:  meson
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
-BuildRequires:  lib64amtk5-devel
+BuildRequires:  pkgconfig(libgedit-amtk-5)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
