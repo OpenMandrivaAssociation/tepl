@@ -7,19 +7,20 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        6.4.0
-Release:        4
+Version:        6.8.0
+Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
 
 License:        LGPLv2+
 URL:            https://wiki.gnome.org/Projects/Tepl
-Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
+#Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
+Source0:        https://gitlab.gnome.org/swilmet/tepl/-/archive/%{version}/tepl-%{version}.tar.bz2
 
 BuildRequires:  meson
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
-BuildRequires:  	lib64amtk5-devel
+BuildRequires:  lib64amtk5-devel
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
