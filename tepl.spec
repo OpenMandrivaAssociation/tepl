@@ -1,5 +1,5 @@
 %global api	6
-%global major	2
+%global major	4
 %define libname %mklibname tepl %{api} %{major}
 %define girname	%mklibname tepl-gir %{api}
 %define devname %mklibname -d tepl %{api}
@@ -7,24 +7,25 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        6.4.0
-Release:        3
+Version:        6.8.0
+Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
 
 License:        LGPLv2+
 URL:            https://wiki.gnome.org/Projects/Tepl
-Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
+#Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
+Source0:        https://gitlab.gnome.org/swilmet/tepl/-/archive/%{version}/tepl-%{version}.tar.bz2
 
 BuildRequires:  meson
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
-BuildRequires:  pkgconfig(amtk-5)
+BuildRequires:  lib64amtk5-devel
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 BuildRequires:  pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(gtksourceview-4)
+BuildRequires:  pkgconfig(libgedit-gtksourceview-300)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(uchardet)
 
