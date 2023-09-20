@@ -8,7 +8,7 @@
 
 Name:           tepl
 Version:        6.8.0
-Release:        1
+Release:        2
 Summary:        Text editor product line
 Group:		System/Libraries
 
@@ -29,6 +29,8 @@ BuildRequires:  pkgconfig(libgedit-gtksourceview-300)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(uchardet)
 
+Obsoletes:	%{name} < %{EVRD}
+
 %description
 Tepl is a library that eases the development of GtkSourceView-based text
 editors and IDEs. Tepl is the acronym for “Text editor product line”.
@@ -37,6 +39,7 @@ editors and IDEs. Tepl is the acronym for “Text editor product line”.
 Summary:        Libraries for %{name}
 Requires:	%{name} >= %{version}-%{release}
 Obsoletes:	%{_lib}tepl0 < 4.2.0-2
+Obsoletes:	%{libname} < %{EVRD}
 
 %description    -n %{libname}
 The %{name}-devel package contains libraries and header files for
@@ -47,6 +50,7 @@ Summary:	GObject Introspection interface description for Tepl
 Group:		System/Libraries
 Requires:	%{libname} = %{version}-%{release}
 Conflicts:	%{name} < 4.2.0-2
+Obsoletes:	%{girname} < %{EVRD}
 
 %description -n %{girname}
 GObject Introspection interface description for Tepl.
@@ -57,6 +61,7 @@ Requires:       %{libname}%{?_isa} = %{version}-%{release}
 Requires:	%{girname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%{_lib}tepl-devel < 4.2.0-2
+Obsoletes:	%{devname} < %{EVRD}
 
 %description    -n %{devname}
 The %{name}-devel package contains libraries and header files for
