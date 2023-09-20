@@ -8,7 +8,7 @@
 
 Name:           tepl
 Version:        6.8.0
-Release:        2
+Release:        3
 Summary:        Text editor product line
 Group:		System/Libraries
 
@@ -40,6 +40,7 @@ Summary:        Libraries for %{name}
 Requires:	%{name} >= %{version}-%{release}
 Obsoletes:	%{_lib}tepl0 < 4.2.0-2
 Obsoletes:	%{libname} < %{EVRD}
+Obsoletes:	%{_lib}tepl6_2
 
 %description    -n %{libname}
 The %{name}-devel package contains libraries and header files for
