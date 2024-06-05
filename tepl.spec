@@ -7,15 +7,16 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        6.8.0
-Release:        5
+Version:        6.10.0
+Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
 
 License:        LGPLv2+
 URL:            https://wiki.gnome.org/Projects/Tepl
 #Source0:        https://download.gnome.org/sources/tepl/%{url_ver}/tepl-%{version}.tar.xz
-Source0:        https://gitlab.gnome.org/swilmet/tepl/-/archive/%{version}/tepl-%{version}.tar.bz2
+#Source0:        https://gitlab.gnome.org/swilmet/tepl/-/archive/%{version}/tepl-%{version}.tar.bz2
+Source0:        https://github.com/gedit-technology/libgedit-tepl/releases/download/%{version}/libgedit-tepl-%{version}.tar.xz
 
 BuildRequires:  meson
 BuildRequires:  gettext
@@ -69,7 +70,7 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %prep
-%autosetup
+%autosetup -n libgedit-tepl-%{version} -p1
 
 %build
 %meson  -Dgtk_doc=true
