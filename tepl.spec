@@ -22,6 +22,7 @@ BuildRequires:  meson
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(libgedit-amtk-5)
+BuildRequires:  pkgconfig(libgedit-gfls-1)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
