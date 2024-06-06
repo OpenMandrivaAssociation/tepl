@@ -83,9 +83,9 @@ developing applications that use %{name}.
 
 find %{buildroot} -name '*.la' -delete
 
-%find_lang tepl-%{api}
+%find_lang tepl
 
-%files -f tepl-%{api}.lang
+%files -f tepl.lang
 %doc NEWS README.md
 
 %files -n %{girname}
