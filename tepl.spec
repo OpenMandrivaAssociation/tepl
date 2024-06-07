@@ -84,21 +84,20 @@ developing applications that use %{name}.
 
 find %{buildroot} -name '*.la' -delete
 
-#find_lang tepl
+%find_lang libgedit-tepl-%{api}
 
-%files 
-#-f tepl.lang
+%files -f libgedit-tepl-%{api}.lang
 %doc NEWS README.md
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/Tepl-%{api}.typelib
 
 %files -n %{libname}
-#{_libdir}/libtepl-%{api}.so.%{major}*
+%{_libdir}/libgedit-tepl-%{api}.so.%{major}
 
 %files -n %{devname}
-#{_datadir}/gtk-doc/html/tepl-%{api}/*
-#{_includedir}/tepl-%{api}/
-#{_libdir}/libtepl-%{api}.so
-#{_libdir}/pkgconfig/tepl-%{api}.pc
+%doc %{_datadir}/gtk-doc/html/libgedit-tepl-%{api}/
+%{_includedir}/libgedit-tepl-%{api}/tepl/
+%{_libdir}/libgedit-tepl-%{api}.so
+%{_libdir}/pkgconfig/libgedit-tepl-%{api}.pc
 %{_datadir}/gir-1.0/Tepl-%{api}.gir
