@@ -1,14 +1,17 @@
 %global api	6
 %global major	2
-%define libname %mklibname tepl %{api} %{major}
-%define girname	%mklibname tepl-gir %{api}
-%define devname %mklibname -d tepl %{api}
+%define libname %mklibname tepl
+%define oldlibname %mklibname tepl 6 1
+%define girname	%mklibname tepl-gir
+%define oldgirname	%mklibname tepl-gir 6
+%define devname %mklibname -d tepl
+%define olddevname %mklibname -d tepl 6
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
 Version:        6.12.0
-Release:        1
+Release:        2
 Summary:        Text editor product line
 Group:		System/Libraries
 
@@ -45,7 +48,7 @@ Summary:        Libraries for %{name}
 Requires:	%{name} >= %{version}-%{release}
 Obsoletes:	%{_lib}tepl0 < 4.2.0-2
 Obsoletes:	%{libname} < %{EVRD}
-Obsoletes:	%{_lib}tepl6_2
+%rename %{oldlibname}
 
 %description    -n %{libname}
 The %{name}-devel package contains libraries and header files for
@@ -57,6 +60,7 @@ Group:		System/Libraries
 Requires:	%{libname} = %{version}-%{release}
 Conflicts:	%{name} < 4.2.0-2
 Obsoletes:	%{girname} < %{EVRD}
+%rename %{oldgirname}
 
 %description -n %{girname}
 GObject Introspection interface description for Tepl.
@@ -68,6 +72,7 @@ Requires:	%{girname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%{_lib}tepl-devel < 4.2.0-2
 Obsoletes:	%{devname} < %{EVRD}
+%rename %{olddevname}
 
 %description    -n %{devname}
 The %{name}-devel package contains libraries and header files for
