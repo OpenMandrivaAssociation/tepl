@@ -1,5 +1,5 @@
 %global api	6
-%global major	3
+%global major	4
 %define libname %mklibname tepl
 %define oldlibname %mklibname tepl 6 1
 %define girname	%mklibname tepl-gir
