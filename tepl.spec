@@ -10,8 +10,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:           tepl
-Version:        6.14.alpha1
-Release:        2
+Version:        6.14.0
+Release:        1
 Summary:        Text editor product line
 Group:		System/Libraries
 
@@ -34,7 +34,7 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(harfbuzz-gobject)
 BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  pkgconfig(libgedit-gtksourceview-300)
-BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:  pkgconfig(libxml-2.0) >= 2.15.2
 BuildRequires:  pkgconfig(uchardet)
 
 Obsoletes:	%{name} < %{EVRD}
